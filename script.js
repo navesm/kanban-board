@@ -111,7 +111,7 @@ function updateItem(id, column) {
   const selectedArray = listArrays[column];
   const selectedColumnEl = listColumns[column].children;
   if (!dragging) {
-    if (!selectedColumnEl[id].textContent) {
+    if (selectedColumnEl[id].textContent === '') {
       delete selectedArray[id];
     } else {
       selectedArray[id] = selectedColumnEl[id].textContent;
